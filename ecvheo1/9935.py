@@ -16,3 +16,4 @@ if len(answer) == 0:
     print("FRULA")
 else:
     print("".join(answer))
+    
