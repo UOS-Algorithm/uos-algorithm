@@ -20,4 +20,3 @@ while start+0.000001 <= end:
         start = mid
 
 print("%0.3f" %start)
-    
