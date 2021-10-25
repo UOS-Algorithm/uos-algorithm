@@ -1,22 +1,20 @@
 import sys
 
 n,m = map(int,sys.stdin.readline().split())
-arr = list(map(int,sys.stdin.readline().split()))
-arr.sort()
 
 result = []
-visited = [False]*(max(arr)+1)
+visited = [False]*n
 
-def back_tracking(index,n,m):
+def back_tracking(index,idx,n,m):
     if index==m:
         print(*result)
         return
     else:
-        for k in arr:
+        for k in range(idx,n):
             if not visited[k]:
                 visited[k]=True
-                result.append(k)
-                back_tracking(index+1,n,m)
+                result.append(k+1)
+                back_tracking(index+1,k,n,m)
                 visited[k]=False
                 result.pop()
-back_tracking(0,n,m)
+back_tracking(0,0,n,m)
