@@ -7,8 +7,7 @@ arr.append(0)
 arr.append(l)
 
 arr.sort()
-
-start = 0
+start = 1
 end = l
 
 
